@@ -72,10 +72,18 @@
       },
       {
         "command": "markdown-hashtags.setSortByCountTags",
-        "title": "Markdown Hashtags: Sort by count tags",
+        "title": "Markdown Hashtags: Set sort by count tags",
         "icon": {
-          "light": "resources/light/number.svg",
-          "dark": "resources/dark/number.svg"
+          "light": "resources/light/sort-by-count-tags.svg",
+          "dark": "resources/dark/sort-by-count-tags.svg"
+        }
+      },
+      {
+        "command": "markdown-hashtags.renameTag",
+        "title": "Markdown Hashtags: Rename tag",
+        "icon": {
+          "light": "resources/light/edit.svg",
+          "dark": "resources/dark/edit.svg"
         }
       }
     ],
@@ -135,6 +143,13 @@
           "command": "markdown-hashtags.setSortByCountTags",
           "when": "view == hashtagTree",
           "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "markdown-hashtags.renameTag",
+          "when": "view == hashtagTree && viewItem == hashtagTreeItem",
+          "group": "inline"
         }
       ]
     },
